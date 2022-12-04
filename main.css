@@ -1,0 +1,365 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.display-justify, footer nav .first {
+  display: flex;
+  justify-content: center;
+}
+
+.platforms, .music-area .apple,
+.music-area .google-play,
+.music-area .microsoft {
+  width: 100px;
+  height: 20px;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+.spotify-logo {
+  display: flex;
+}
+.spotify-logo i {
+  font-size: xx-large;
+}
+.spotify-logo p {
+  font-size: x-large;
+  margin-left: 5px;
+}
+
+header {
+  background-color: black;
+  width: 100%;
+  height: 80px;
+  color: white;
+}
+header .head {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+}
+header li {
+  display: inline;
+  margin: 20px;
+  font-size: large;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+header li:hover {
+  color: rgb(84, 196, 84);
+}
+
+.download {
+  background-color: #1ed760;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+}
+.download .download-body {
+  margin: auto;
+  text-align: center;
+}
+.download .download-body li {
+  padding: 1rem;
+}
+.download h1 {
+  font-size: xx-large;
+}
+.download .picture {
+  width: 200px;
+}
+.download button {
+  width: 6rem;
+  height: 2rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
+.download button:hover {
+  transform: scale(1.1);
+  background-color: rgb(224, 217, 210);
+}
+
+.music-area {
+  padding: 3rem;
+}
+.music-area .music {
+  text-align: center;
+  margin: 20px;
+}
+.music-area .music p {
+  margin-top: 20px;
+}
+.music-area .apple,
+.music-area .google-play,
+.music-area .microsoft {
+  margin-left: 10px;
+}
+.music-area .platform-area {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+.music-area .platform-area i {
+  font-size: x-large;
+}
+.music-area .platform-area h5 {
+  margin-left: 3px;
+}
+.music-area .platform-area p {
+  font-size: x-small;
+}
+.music-area .platform-area .apple {
+  width: 104px;
+}
+
+.devices {
+  display: flex;
+  justify-content: center;
+}
+.devices .device-image {
+  padding: 2rem;
+  text-align: center;
+}
+.devices h1 {
+  text-align: center;
+}
+.devices ul {
+  padding: 3rem;
+}
+.devices a {
+  color: #1ed760;
+}
+.devices li {
+  display: inline;
+  margin: 2rem;
+}
+
+footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+  height: 40rem;
+}
+footer nav {
+  width: 100%;
+}
+footer nav .first {
+  padding: 5rem;
+}
+footer nav .first .logo {
+  display: flex;
+}
+footer nav .first .logo i {
+  font-size: xx-large;
+}
+footer nav .first .logo p {
+  font-size: xx-large;
+}
+footer nav .first .page-list {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+footer nav .first .page-list div:nth-child(3) {
+  margin-left: 4rem;
+}
+footer nav .first .page-list div:nth-child(2) {
+  margin-left: 4rem;
+}
+footer nav .first .page-list h3 {
+  font-size: x-small;
+  color: gray;
+  text-align: start;
+}
+footer nav .first .page-list li {
+  margin-top: 1rem;
+  cursor: pointer;
+}
+footer nav .first .page-list li:hover {
+  color: rgb(84, 196, 84);
+}
+footer nav .first .social-media li {
+  display: inline-flex;
+}
+footer nav .first .social-media i {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(53, 48, 48);
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  cursor: pointer;
+}
+footer nav .first .social-media i:hover {
+  color: rgb(84, 196, 84);
+}
+footer .country {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+  color: gray;
+}
+footer .information {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 20px;
+  color: gray;
+}
+footer .information ul {
+  margin-left: 22rem;
+}
+footer .information li {
+  display: inline;
+  margin: 2rem;
+  font-size: small;
+}
+
+@media (min-width: 320px) and (max-width: 460px) {
+  .spotify-logo i {
+    font-size: large;
+  }
+  .spotify-logo p {
+    font-size: small;
+  }
+  header {
+    height: 40px;
+  }
+  header .head {
+    padding: 10px;
+  }
+  header li {
+    margin: 10px;
+    font-size: x-small;
+  }
+  .download h1 {
+    font-size: xx-large;
+  }
+  .download .picture {
+    width: 100px;
+  }
+  .music-area {
+    padding: 3rem;
+  }
+  .music-area .music {
+    text-align: center;
+    margin: 20px;
+  }
+  .music-area .music h1 {
+    font-size: large;
+  }
+  .music-area .music p {
+    font-size: small;
+  }
+  .music-area .platform-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .music-area .platform-area .microsoft {
+    margin-top: 20px;
+  }
+  .music-area .platform-area i {
+    font-size: small;
+  }
+  .music-area .platform-area h5 {
+    margin-left: 3px;
+  }
+  .music-area .platform-area p {
+    font-size: x-small;
+  }
+  .devices {
+    text-align: center;
+  }
+  .devices .devices-element img {
+    width: 100%;
+  }
+  .devices .devices-element ul {
+    padding: 1rem;
+  }
+  .devices .devices-element li {
+    display: block;
+  }
+  .devices .devices-element h1 {
+    font-size: medium;
+  }
+  footer {
+    height: 100%;
+  }
+  footer nav .first {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  footer nav .first .logo {
+    display: flex;
+  }
+  footer nav .first .logo i {
+    font-size: small;
+  }
+  footer nav .first .logo p {
+    font-size: small;
+    margin-left: 12px;
+  }
+  footer nav .first .page-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+  }
+  footer nav .first .page-list div:nth-child(3) {
+    margin-left: 0;
+  }
+  footer nav .first .page-list div:nth-child(2) {
+    margin-left: 0;
+  }
+  footer nav .first .page-list h3 {
+    font-size: 5px;
+    margin-top: 20px;
+  }
+  footer nav .first .page-list ul {
+    margin-top: 0.5rem;
+  }
+  footer nav .first .page-list li {
+    margin-top: 0.5rem;
+    font-size: xx-small;
+  }
+  footer nav .first .social-media {
+    display: flex;
+    margin-top: 2rem;
+  }
+  footer nav .first .social-media i {
+    font-size: small;
+    width: 30px;
+    height: 30px;
+  }
+  footer .country {
+    width: 100%;
+  }
+  footer .country a {
+    font-size: xx-small;
+  }
+  footer .information {
+    width: 100%;
+  }
+  footer .information ul {
+    display: grid;
+    margin-left: 0rem;
+  }
+  footer .information li {
+    margin: 0.3rem;
+    font-size: xx-small;
+  }
+  footer .information a {
+    font-size: xx-small;
+  }
+}/*# sourceMappingURL=main.css.map */
