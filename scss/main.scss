@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  font-family: $font;
 }
 
 .platforms {
@@ -137,7 +138,7 @@ footer {
   color: $color;
   height: 30rem;
   nav {
-    width: $width;
+    width: $width;  
     .first {
       @include display-flex;
       padding: 5rem;
@@ -304,7 +305,7 @@ footer {
         }
         .page-list {
           @include display-grid;
-          margin-top: 2rem;
+          margin-top: 0rem;
           div:nth-child(2) {
             margin-left: 0;
           }
@@ -316,7 +317,7 @@ footer {
             margin-top: 20px;
           }
           ul {
-            margin-top: 0.5rem;
+            margin-top: 0rem;
           }
           li {
             margin-top: 0.5rem;
