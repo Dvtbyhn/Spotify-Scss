@@ -6,3 +6,7 @@
     display: grid;
     grid-template-columns: 1fr;
 }
+@mixin  justify-around {
+    display: flex;
+    justify-content: space-around;
+}
