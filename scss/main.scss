@@ -23,11 +23,12 @@
 
 .spotify-logo {
   display: $displayFlex;
+  
   i {
-    font-size: xx-large;
+    font-size: x-large;
   }
   p {
-    font-size: $fontXxLarge;
+    font-size: x-large;
     margin-left: 5px;
   }
 }
@@ -42,7 +43,7 @@ header {
     padding: 30px;
     li {
       display: $displayInline;
-      margin: 20px;
+      margin: 10px;
       cursor: pointer;
       transition-duration: 1s;
       &:hover {
@@ -86,7 +87,7 @@ header {
   font-family: $font;
   .music {
     text-align: $textCenter;
-    margin: 20px;
+    margin: 30px;
     p {
       margin-top: 20px;
     }
@@ -115,14 +116,16 @@ header {
 }
 
 .devices {
-  // @include display-flex;
+  @include display-flex;
   font-family: $font;
   text-align: $textCenter;
+  padding: 5rem;
   h1 {
+    padding: 5rem;
     text-align: $textCenter;
   }
   ul {
-    padding: 3rem;
+    padding: 1rem;
   }
   a {
     color: $hover-color;
@@ -218,11 +221,12 @@ footer {
 
 @media (min-width: 320px) and (max-width: 480px) {
   .spotify-logo {
+    margin-top: 3px;
     i {
-      font-size: $fontLarge;
+      font-size: small;
     }
     p {
-      font-size: $fontSmall;
+      font-size: small;
     }
   }
   header {
@@ -343,13 +347,13 @@ footer {
     }
     .information {
       width: $width;
+      margin-top: 0;
       ul {
-        display: grid;
         margin-left: 0rem;
       }
       li {
-        margin: 0.3rem;
-        font-size: $fontXxSmall;
+        margin: 0.1rem;
+        font-size: 6px;
       }
       a {
         font-size: $fontXxSmall;
@@ -360,11 +364,12 @@ footer {
 
 @media (min-width: 481px) and (max-width: 787px) {
   .spotify-logo {
+    margin-top: 3px;
     i {
-      font-size: $fontXxLarge;
+      font-size: $fontLarge;
     }
     p {
-      font-size:$fontLarge;
+      font-size: $fontLarge;
     }
   }
   header {
@@ -385,9 +390,7 @@ footer {
       font-size: $fontLarge;
     }
     button {
-      width: 8rem;
-      height: 3rem;
-      font-size: $fontXxLarge;
+      font-size: $fontMedium;
     }
   }
   .music-area {
@@ -480,7 +483,7 @@ footer {
       }
       li {
         margin: 0.3rem;
-        font-size: x-small;
+        font-size: xx-small;
       }
       a {
         font-size: $fontSmall;
