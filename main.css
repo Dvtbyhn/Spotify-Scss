@@ -390,10 +390,10 @@ footer .information li {
     font-size: large;
   }
   .music-area .platform-area i {
-    font-size: medium;
+    font-size: large;
   }
   .music-area .platform-area h5 {
-    margin-left: 3px;
+    margin-left: 2px;
   }
   .music-area .platform-area p {
     font-size: small;
@@ -460,7 +460,7 @@ footer .information li {
   }
   footer .information li {
     margin: 0.3rem;
-    font-size: small;
+    font-size: x-small;
   }
   footer .information a {
     font-size: small;
