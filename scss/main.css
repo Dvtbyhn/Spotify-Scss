@@ -7,14 +7,14 @@
 .platforms, .music-area .apple,
 .music-area .google-play,
 .music-area .microsoft {
-  width: 90px;
+  width: 100px;
   height: 20px;
   background-color: black;
   color: white;
   display: flex;
   align-items: center;
   padding: 12px;
-  border-radius: 14px;
+  border-radius: 24px;
   cursor: pointer;
 }
 
@@ -43,7 +43,6 @@ header .head {
 header .head li {
   display: inline;
   margin: 20px;
-  font-size: large;
   cursor: pointer;
   transition-duration: 1s;
 }
@@ -102,10 +101,9 @@ header .head li:hover {
 .music-area .platform-area {
   display: flex;
   justify-content: center;
-  padding: 2rem;
 }
 .music-area .platform-area i {
-  font-size: xx-large;
+  font-size: small;
 }
 .music-area .platform-area h5 {
   margin-left: 3px;
@@ -114,12 +112,10 @@ header .head li:hover {
   font-size: x-small;
 }
 .music-area .platform-area .apple {
-  width: 104px;
+  width: 100px;
 }
 
 .devices {
-  display: flex;
-  justify-content: center;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   text-align: center;
 }
@@ -256,7 +252,10 @@ footer .information li {
   }
   .music-area .platform-area {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  .music-area .platform-area .microsoft {
+    margin-top: 22px;
   }
   .music-area .platform-area i {
     font-size: small;
@@ -367,10 +366,10 @@ footer .information li {
     font-size: small;
   }
   .download .picture {
-    width: 200px;
+    width: 100px;
   }
   .download p {
-    font-size: xx-large;
+    font-size: large;
   }
   .download button {
     width: 8rem;
@@ -387,8 +386,8 @@ footer .information li {
     font-size: large;
   }
   .music-area .platform-area {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    justify-content: center;
   }
   .music-area .platform-area i {
     font-size: large;
@@ -481,12 +480,12 @@ footer .information li {
     width: 200px;
   }
   .download p {
-    font-size: xx-large;
+    font-size: large;
   }
   .download button {
     width: 8rem;
     height: 3rem;
-    font-size: xx-large;
+    font-size: large;
   }
   .music-area .music {
     text-align: center;

@@ -43,16 +43,15 @@ header {
       display: $displayInline;
       margin: 20px;
       cursor: pointer;
-      transition-duration: 2s;
+      transition-duration: 1s;
       &:hover {
         color: $hover-color;
       }
     }
   }
 }
-
 .download {
-  background-color: #d71e1e;
+  background-color: #1ed760;
   width: $width;
   height: 500px;
   @include display-flex;
@@ -98,8 +97,9 @@ header {
     margin-left: 3px;
   }
   .platform-area {
+    @include display-flex;
     i {
-      font-size: $fontXxLarge;
+      font-size: $fontSmall;
     }
     h5 {
       margin-left: 3px;
@@ -108,13 +108,13 @@ header {
       font-size: x-small;
     }
     .apple {
-      width: 104px;
+      width: 100px;
     }
   }
 }
 
 .devices {
-  @include display-flex;
+  // @include display-flex;
   font-family: $font;
   text-align: $textCenter;
   h1 {
@@ -218,7 +218,7 @@ footer {
 @media (min-width: 320px) and (max-width: 480px) {
   .spotify-logo {
     i {
-      font-size: $large;
+      font-size: $fontLarge;
     }
     p {
       font-size: $fontSmall;
@@ -246,7 +246,7 @@ footer {
     .music {
       text-align: $textCenter;
       h1 {
-        font-size: $large;
+        font-size: $fontLarge;
       }
       p {
         font-size: $fontSmall;
@@ -254,7 +254,10 @@ footer {
     }
     .platform-area {
      display: grid;
-     grid-template-columns: 1fr 1fr 1fr;
+     grid-template-columns: 1fr 1fr ;
+     .microsoft{
+      margin-top: 22px;
+     }
       i {
         font-size: $fontSmall;
       }
@@ -360,7 +363,7 @@ footer {
       font-size: $fontXxLarge;
     }
     p {
-      font-size: $large;
+      font-size:$fontLarge;
     }
   }
   header {
@@ -378,7 +381,7 @@ footer {
       width: 100px;
     }
     p {
-      font-size: $fontXxLarge;
+      font-size: $fontLarge;
     }
     button {
       width: 8rem;
@@ -394,14 +397,13 @@ footer {
         font-size: $fontXxLarge;
       }
       p {
-        font-size: $large;
+        font-size: $fontLarge;
       }
     }
     .platform-area {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+      @include display-flex;
       i {
-        font-size: $large;
+        font-size: $fontLarge;
       }
       h5 {
         margin-left: 2px;
@@ -501,12 +503,12 @@ footer {
       width: 200px;
     }
     p {
-      font-size: $fontXxLarge;
+      font-size: $fontLarge;
     }
     button {
       width: 8rem;
       height: 3rem;
-      font-size: $fontXxLarge;
+      font-size: $fontLarge;
     }
   }
   .music-area {

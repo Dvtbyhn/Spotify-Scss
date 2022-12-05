@@ -6,6 +6,10 @@
     display: grid;
     grid-template-columns: 1fr;
 }
+@mixin platformGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
 @mixin  justify-around {
     display: flex;
     justify-content: space-around;
