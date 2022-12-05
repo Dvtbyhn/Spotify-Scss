@@ -14,7 +14,7 @@
   color: white;
   display: flex;
   align-items: center;
-  padding: 12px;
+  padding: 15px;
   border-radius: 24px;
   cursor: pointer;
 }
@@ -124,11 +124,12 @@ header .head li:hover {
   padding: 5rem;
 }
 .devices h1 {
-  padding: 5rem;
+  margin-top: 50px;
   text-align: center;
 }
 .devices ul {
   padding: 1rem;
+  margin-top: 50px;
 }
 .devices a {
   color: rgb(84, 196, 84);
@@ -274,17 +275,17 @@ footer .information li {
   .music-area .platform-area p {
     font-size: x-small;
   }
+  .devices .devices-element h1 {
+    font-size: large;
+  }
   .devices .devices-element img {
     width: 100%;
   }
   .devices .devices-element ul {
-    padding: 1rem;
+    padding: 0;
   }
   .devices .devices-element li {
     display: block;
-  }
-  .devices .devices-element h1 {
-    font-size: medium;
   }
   footer {
     height: 100%;
