@@ -4,15 +4,10 @@
   list-style: none;
 }
 
-.display-justify, footer nav .first {
-  display: flex;
-  justify-content: center;
-}
-
 .platforms, .music-area .apple,
 .music-area .google-play,
 .music-area .microsoft {
-  width: 100px;
+  width: 90px;
   height: 20px;
   background-color: black;
   color: white;
@@ -30,7 +25,7 @@
   font-size: xx-large;
 }
 .spotify-logo p {
-  font-size: x-large;
+  font-size: xx-large;
   margin-left: 5px;
 }
 
@@ -102,7 +97,7 @@ header .head li:hover {
 .music-area .apple,
 .music-area .google-play,
 .music-area .microsoft {
-  margin-left: 10px;
+  margin-left: 3px;
 }
 .music-area .platform-area {
   display: flex;
@@ -110,7 +105,7 @@ header .head li:hover {
   padding: 2rem;
 }
 .music-area .platform-area i {
-  font-size: x-large;
+  font-size: xx-large;
 }
 .music-area .platform-area h5 {
   margin-left: 3px;
@@ -135,7 +130,7 @@ header .head li:hover {
   padding: 3rem;
 }
 .devices a {
-  color: #1ed760;
+  color: rgb(84, 196, 84);
 }
 .devices li {
   display: inline;
@@ -152,6 +147,8 @@ footer nav {
   width: 100%;
 }
 footer nav .first {
+  display: flex;
+  justify-content: center;
   padding: 5rem;
 }
 footer nav .first .logo {
@@ -168,10 +165,10 @@ footer nav .first .page-list {
   display: flex;
   justify-content: center;
 }
-footer nav .first .page-list div:nth-child(3) {
+footer nav .first .page-list div:nth-child(2) {
   margin-left: 4rem;
 }
-footer nav .first .page-list div:nth-child(2) {
+footer nav .first .page-list div:nth-child(3) {
   margin-left: 4rem;
 }
 footer nav .first .page-list h3 {
@@ -193,7 +190,7 @@ footer nav .first .social-media i {
   width: 50px;
   height: 50px;
   background-color: rgb(53, 48, 48);
-  font-size: x-large;
+  font-size: xx-large;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -354,7 +351,7 @@ footer .information li {
 }
 @media (min-width: 481px) and (max-width: 787px) {
   .spotify-logo i {
-    font-size: x-large;
+    font-size: xx-large;
   }
   .spotify-logo p {
     font-size: large;
@@ -373,12 +370,12 @@ footer .information li {
     width: 200px;
   }
   .download p {
-    font-size: x-large;
+    font-size: xx-large;
   }
   .download button {
     width: 8rem;
     height: 3rem;
-    font-size: x-large;
+    font-size: xx-large;
   }
   .music-area .music {
     text-align: center;
@@ -388,6 +385,10 @@ footer .information li {
   }
   .music-area .music p {
     font-size: large;
+  }
+  .music-area .platform-area {
+    display: grid;
+    grid-template-columns: 1fr;
   }
   .music-area .platform-area i {
     font-size: large;
@@ -480,12 +481,12 @@ footer .information li {
     width: 200px;
   }
   .download p {
-    font-size: x-large;
+    font-size: xx-large;
   }
   .download button {
     width: 8rem;
     height: 3rem;
-    font-size: x-large;
+    font-size: xx-large;
   }
   .music-area .music {
     text-align: center;
@@ -524,7 +525,7 @@ footer .information li {
     font-size: xx-large;
   }
   footer nav .first .logo p {
-    font-size: x-large;
+    font-size: xx-large;
     margin-left: 12px;
   }
   footer nav .first .page-list {

@@ -1,24 +1,14 @@
+@import "mixin";
+@import "variables";
+
 * {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-$color: white;
-$backgroundBlack: black;
-$hover-color: rgb(84, 196, 84);
-$width: 100%;
-$displayFlex: flex;
-$textCenter: center;
-$font: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-
-.display-justify {
-  display: flex;
-  justify-content: center;
-}
-
 .platforms {
-  width: 100px;
+  width: 90px;
   height: 20px;
   background-color: $backgroundBlack;
   color: $color;
@@ -35,7 +25,7 @@ $font: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-size: xx-large;
   }
   p {
-    font-size: x-large;
+   font-size: $fontXxLarge;
     margin-left: 5px;
   }
 }
@@ -50,7 +40,7 @@ header {
     justify-content: space-around;
     padding: 30px;
     li {
-      display: inline;
+      display: $displayInline;
       margin: 20px;
       font-size: large;
       cursor: pointer;
@@ -66,8 +56,7 @@ header {
   background-color: #1ed760;
   width: $width;
   height: 500px;
-  display: $displayFlex;
-  justify-content: center;
+  @include display-flex;
 
   .download-body {
     margin: auto;
@@ -108,14 +97,13 @@ header {
   .google-play,
   .microsoft {
     @extend .platforms;
-    margin-left: 10px;
+    margin-left: 3px;
   }
   .platform-area {
-    display: $displayFlex;
-    justify-content: center;
+    @include display-flex;
     padding: 2rem;
     i {
-      font-size: x-large;
+     font-size: $fontXxLarge;
     }
     h5 {
       margin-left: 3px;
@@ -130,22 +118,20 @@ header {
 }
 
 .devices {
-  display: $displayFlex;
-  justify-content: center;
+  @include display-flex;
   font-family: $font;
   text-align: $textCenter;
   h1 {
     text-align: $textCenter;
   }
-
   ul {
     padding: 3rem;
   }
   a {
-    color: #1ed760;
+    color: $hover-color;
   }
   li {
-    display: inline;
+    display: $displayInline;
     margin: 1.5rem;
   }
 }
@@ -155,9 +141,9 @@ footer {
   color: $color;
   height: 30rem;
   nav {
-    width: 100%;
+   width: $width;
     .first {
-      @extend .display-justify;
+      @include display-flex;
       padding: 5rem;
       .logo {
         display: $displayFlex;
@@ -170,12 +156,11 @@ footer {
       }
       .page-list {
         width: 50%;
-        display: $displayFlex;
-        justify-content: center;
-        div:nth-child(3) {
+        @include display-flex;
+        div:nth-child(2) {
           margin-left: 4rem;
         }
-        div:nth-child(2) {
+        div:nth-child(3) {
           margin-left: 4rem;
         }
         h3 {
@@ -199,9 +184,8 @@ footer {
           width: 50px;
           height: 50px;
           background-color: rgb(53, 48, 48);
-          font-size: x-large;
-          display: $displayFlex;
-          justify-content: center;
+         font-size: $fontXxLarge;
+          @include display-flex;
           align-items: center;
           border-radius: 40px;
           cursor: pointer;
@@ -228,9 +212,9 @@ footer {
       margin-left: 22rem;
     }
     li {
-      display: inline;
+      display: $displayInline;
       margin: 2rem;
-      font-size: small;
+      font-size: $fontSmall;
     }
   }
 }
@@ -242,7 +226,7 @@ footer {
       font-size: large;
     }
     p {
-      font-size: small;
+      font-size: $fontSmall;
     }
   }
   header {
@@ -270,14 +254,15 @@ footer {
         font-size: large;
       }
       p {
-        font-size: small;
+        font-size: $fontSmall;
       }
     }
     .platform-area {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr  1fr;
+       
       i {
-        font-size: small;
+        font-size: $fontSmall;
       }
       h5 {
         margin-left: 3px;
@@ -291,7 +276,7 @@ footer {
   .devices {
     .devices-element {
       img {
-        width: 100%;
+       width: $width;
       }
       ul {
         padding: 1rem;
@@ -308,22 +293,20 @@ footer {
     height: 100%;
     nav {
       .first {
-        display: grid;
-        grid-template-columns: 1fr;
+        @include display-grid;
         padding: 1rem;
         .logo {
           display: $displayFlex;
           i {
-            font-size: small;
+            font-size: $fontSmall;
           }
           p {
-            font-size: small;
+            font-size: $fontSmall;
             margin-left: 12px;
           }
         }
         .page-list {
-          display: grid;
-          grid-template-columns: 1fr;
+          @include display-grid;
           margin-top: 2rem;
           div:nth-child(2) {
             margin-left: 0;
@@ -340,14 +323,14 @@ footer {
           }
           li {
             margin-top: 0.5rem;
-            font-size: xx-small;
+          font-size: $fontXxSmall;
           }
         }
         .social-media {
-          display: flex;
+          display: $displayFlex;
           margin-top: 2rem;
           i {
-            font-size: small;
+            font-size: $fontSmall;
             width: 30px;
             height: 30px;
           }
@@ -355,23 +338,23 @@ footer {
       }
     }
     .country {
-      width: 100%;
+     width: $width;
       a {
-        font-size: xx-small;
+      font-size: $fontXxSmall;
       }
     }
     .information {
-      width: 100%;
+     width: $width;
       ul {
         display: grid;
         margin-left: 0rem;
       }
       li {
         margin: 0.3rem;
-        font-size: xx-small;
+      font-size: $fontXxSmall;
       }
       a {
-        font-size: xx-small;
+      font-size: $fontXxSmall;
       }
     }
   }
@@ -380,7 +363,7 @@ footer {
 @media (min-width: 481px) and (max-width: 787px) {
   .spotify-logo {
     i {
-      font-size: x-large;
+     font-size: $fontXxLarge;
     }
     p {
       font-size: large;
@@ -392,7 +375,7 @@ footer {
       padding: 20px;
       li {
         margin: 10px;
-        font-size: small;
+        font-size: $fontSmall;
       }
     }
   }
@@ -401,25 +384,26 @@ footer {
       width: 200px;
     }
     p {
-      font-size: x-large;
+     font-size: $fontXxLarge;
     }
     button {
       width: 8rem;
       height: 3rem;
-      font-size: x-large;
+     font-size: $fontXxLarge;
     }
   }
   .music-area {
     .music {
       text-align: $textCenter;
       h1 {
-        font-size: xx-large;
+        font-size:  $fontXxLarge;
       }
       p {
         font-size: large;
       }
     }
     .platform-area {
+      @include display-grid;
       i {
         font-size: large;
       }
@@ -427,7 +411,7 @@ footer {
         margin-left: 2px;
       }
       p {
-        font-size: small;
+        font-size: $fontSmall;
       }
     }
   }
@@ -435,7 +419,7 @@ footer {
   .devices {
     .devices-element {
       img {
-        width: 100%;
+       width: $width;
       }
       li {
         display: block;
@@ -446,8 +430,7 @@ footer {
     height: 100%;
     nav {
       .first {
-        display: grid;
-        grid-template-columns: 1fr;
+   @include display-grid;
         padding: 1rem;
         .logo {
           display: $displayFlex;
@@ -460,7 +443,7 @@ footer {
           }
         }
         .page-list {
-          width: 100%;
+         width: $width;
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
           margin-top: 2rem;
@@ -475,33 +458,33 @@ footer {
           }
           li {
             margin-top: 0.5rem;
-            font-size: small;
+            font-size: $fontSmall;
           }
         }
         .social-media {
-          display: flex;
+          display: $displayFlex;
           margin-top: 2rem;
         }
       }
     }
     .country {
-      width: 100%;
+     width: $width;
       a {
         font-size: x-small;
       }
     }
     .information {
-      width: 100%;
+     width: $width;
       ul {
-        display: flex;
+        display: $displayFlex;
         margin-left: 0rem;
       }
       li {
         margin: 0.3rem;
-        font-size:x-small;
+        font-size: x-small;
       }
       a {
-        font-size: small;
+        font-size: $fontSmall;
       }
     }
   }
@@ -522,19 +505,19 @@ footer {
       width: 200px;
     }
     p {
-      font-size: x-large;
+     font-size: $fontXxLarge;
     }
     button {
       width: 8rem;
       height: 3rem;
-      font-size: x-large;
+     font-size: $fontXxLarge;
     }
   }
   .music-area {
     .music {
       text-align: $textCenter;
       h1 {
-        font-size: xx-large;
+        font-size:$fontXxLarge;
       }
       p {
         font-size: large;
@@ -542,7 +525,7 @@ footer {
     }
     .platform-area {
       i {
-        font-size: small;
+        font-size: $fontSmall;
       }
       p {
         font-size: x-small;
@@ -554,7 +537,7 @@ footer {
     text-align: $textCenter;
     .devices-element {
       li {
-        display: inline;
+        display: $displayInline;
       }
     }
   }
@@ -562,10 +545,9 @@ footer {
     height: 100%;
     nav {
       .first {
-        display: grid;
-        grid-template-columns: 1fr;
+  @include display-grid;
         padding: 1rem;
-        
+
         .logo {
           margin-left: 5rem;
           display: $displayFlex;
@@ -573,13 +555,13 @@ footer {
             font-size: xx-large;
           }
           p {
-            font-size: x-large;
+           font-size: $fontXxLarge;
             margin-left: 12px;
           }
         }
         .page-list {
-          width: 100%;
-          display: flex;
+         width: $width;
+          display: $displayFlex;
           justify-content: space-around;
           margin-top: 2rem;
           div:nth-child(2) {
@@ -609,22 +591,21 @@ footer {
     .country {
       width: 90%;
       a {
-        font-size: small;
+        font-size: $fontSmall;
       }
     }
     .information {
       width: 90%;
       ul {
-        display: flex;
+        display: $displayFlex;
         margin-left: 4rem;
       }
       li {
         margin: 0.3rem;
-        font-size: small;
+        font-size: $fontSmall;
       }
       a {
-        
-        font-size: small;
+        font-size: $fontSmall;
       }
     }
   }
@@ -637,7 +618,7 @@ footer {
       img {
       }
       li {
-        display: inline;
+        display: $displayInline;
         margin: 1rem;
       }
     }
@@ -645,22 +626,22 @@ footer {
   footer {
     height: 100%;
     nav {
-      .first{
-      padding: 0; 
-      .page-list{
-        margin-top: 5rem;
-      }
-      .logo {
-        display: $displayFlex;
-        margin-top: 5rem;
-      }
-      .social-media{
-        margin-top: 5rem;
-      }
+      .first {
+        padding: 0;
+        .page-list {
+          margin-top: 5rem;
+        }
+        .logo {
+          display: $displayFlex;
+          margin-top: 5rem;
+        }
+        .social-media {
+          margin-top: 5rem;
+        }
       }
     }
     .country {
-    width: 95%;
+      width: 95%;
     }
     .information {
       width: 95%;
@@ -670,12 +651,9 @@ footer {
         margin-left: 9rem;
       }
       li {
-        display: inline;
+        display: $displayInline;
         margin: 1rem;
       }
     }
   }
 }
-
-
-
