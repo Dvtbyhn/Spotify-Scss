@@ -357,9 +357,6 @@ footer .information li {
   }
 }
 @media (min-width: 481px) and (max-width: 787px) {
-  .spotify-logo {
-    margin-top: 3px;
-  }
   .spotify-logo i {
     font-size: large;
   }
