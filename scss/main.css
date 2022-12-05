@@ -275,6 +275,9 @@ footer .information li {
   .music-area .platform-area p {
     font-size: x-small;
   }
+  .music-area .platform-area .apple {
+    width: 140px;
+  }
   .devices .devices-element h1 {
     font-size: large;
   }
